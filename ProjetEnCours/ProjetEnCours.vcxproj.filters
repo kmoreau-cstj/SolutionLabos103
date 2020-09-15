@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="feuilleErreurPasCommettre.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="Labo03Exercice1.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
