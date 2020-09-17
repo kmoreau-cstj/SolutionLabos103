@@ -29,7 +29,7 @@ int main()
 	if (lePlusGrand < nb3)
 		lePlusGrand = nb3;
 	if (lePlusGrand < nb4)
-		lePlusGrand = nb4;
+		lePlusGrand = nb4; 
 	if (lePlusGrand < nb5)
 		lePlusGrand = nb5;
 
