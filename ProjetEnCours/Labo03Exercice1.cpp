@@ -32,11 +32,12 @@ int main()
 
 	// Le programme confirme le choix de l'utilisateur
 	// Je commence par me débarrasser des erreurs
-	if (choix < 1 || choix > 6)
+	if  (!(choix >=1 && choix <=6)) //(choix < 1 || choix > 6)
 	{
 		std::cout << "Erreur : Le choix doit être compris entre 1 et 6.";
 	}
-	else     // Ici le choix est bien compris entre 1 et 6
+	else     // Ici le choix est bien compris entre 1 et 6 : Tous les signes de la condition du if sont inversés
+		// choix >=1 && choix <=6
 	{
 		switch (choix)
 		{

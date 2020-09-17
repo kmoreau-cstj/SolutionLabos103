@@ -19,7 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo03Exercice1.cpp" />
+    <ClCompile Include="FeuilleDeNoteOuErreur.cpp" />
+    <ClCompile Include="Labo03Exercice2.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
