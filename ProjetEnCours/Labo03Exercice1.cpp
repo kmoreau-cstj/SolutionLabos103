@@ -1,22 +1,25 @@
-// But : Le programme affiche un menu et demande le choix à l'utilisateur. Le programme valide le choix 
-// et confirme l'opération choisie ou affiche un message d'erreur
+// But : Écrire un programme qui affiche un menu. Le programme demande à l'utilisateur son choix et
+// il confirme l'opération, sinon il affiche un message d'erreur "Le choix doit être compris entre 1 et 6.
 /*
 	1. Addition
 	2. Soustraction
 	3. Multiplication
 	4. Division
 	5. Modulo
-	6. Quitter
+	6. Quitter !!!
 */
 
-#include <iostream>
+// Auteur : Karine Moreau
+// Date : 2020-09-15
+
+#include<iostream>
+
 
 int main()
 {
 	setlocale(LC_ALL, "");
 	// Déclaration des variables
 	int choix;
-
 
 	// Le programme affiche le menu
 	std::cout << "1. Addition" << std::endl;
@@ -27,66 +30,46 @@ int main()
 	std::cout << "6. Quitter" << std::endl;
 
 	// Le programme demande le choix à l'utilisateur
-	std::cout << "Votre choix -->";
+	std::cout << "Votre choix --> ";
 	std::cin >> choix;
+	// Si le choix est compris entre 1 et 6, le programme confirme le choix en toute lettre
+	if (choix >= 1)
+	{
+		if (choix <= 6)
+		{
+			if (choix == 1)
+			{
+				std::cout << "Addition";
+			}
+			if (choix == 2)
+			{
+				std::cout << "Soustraction";
+			}
+			if (choix == 3)
+			{
+				std::cout << "Multiplication";
+			}
+			if (choix == 4)
+			{
+				std::cout << "Division";
+			}
+			if (choix == 5)
+			{
+				std::cout << "Modulo";
+			}
+			if (choix == 6)
+			{
+				std::cout << "Quitter";
+			}
+		}
+		// sinon, le programme affiche un message d'erreur
+		else
+			std::cout << "Le choix doit être compris entre 1 et 6";
+	}
+	else
+		std::cout << "Le choix doit être compris entre 1 et 6";
 
-	// Le programme confirme le choix de l'utilisateur
-	// Je commence par me débarrasser des erreurs
-	if  (!(choix >=1 && choix <=6)) //(choix < 1 || choix > 6)
-	{
-		std::cout << "Erreur : Le choix doit être compris entre 1 et 6.";
-	}
-	else     // Ici le choix est bien compris entre 1 et 6 : Tous les signes de la condition du if sont inversés
-		// choix >=1 && choix <=6
-	{
-		switch (choix)
-		{
-		case 1 :
-			std::cout << "L'addition";
-			break;
-		case 2:
-			std::cout << "La soustraction";
-		case 3 :
-			std::cout << "La multiplication";
-		case 4:
-			std::cout << "La division";
-			break;
-		case 5:
-			std::cout << "Le modulo";
-		case 6:
-			std::cout << "Quitter";
-		default:
-			std::cout << "Erreur :...";
-			break;
-		}
-		
-		
-		// Ici on a six cas possibles
-		if (choix == 1)
-		{
-			std::cout << "vous avez choisi l'addition.";
-		}
-		if (choix == 2)
-		{
-			std::cout << "vous avez choisi la soustraction.";
-		}
-		if (choix == 3)
-		{
-			std::cout << "vous avez choisi la multiplication.";
-		}
-		if (choix == 4)
-		{
-			std::cout << "vous avez choisi la division.";
-		}
-		if (choix == 5)
-		{
-			std::cout << "vous avez choisi le modulo.";
-		}
-		if (choix == 6)
-		{
-			std::cout << "vous avez choisi de quitter.";
-		}
-	}
+
 
 
 	return 0;
