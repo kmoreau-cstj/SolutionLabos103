@@ -40,19 +40,19 @@ void main()
 	// Dire s'il est multiple de 2 ou 3 ou les deux ou pas du tout
 	if (nb % 2 == 0)
 	{
-		std::cout << nb << " est multiple 2";
+		std::cout << nb << " est multiple 2" << std::endl;
 	}
 	if (nb % 3 == 0)
 	{
-		std::cout << nb << " est multiple de 3";
+		std::cout << nb << " est multiple de 3" << std::endl;
 	}
 	if (nb % 2 == 0 && nb % 3 == 0)
 	{
-		std::cout << nb << " est multiple de 2 et de 3";
+		std::cout << nb << " est multiple de 2 et de 3" << std::endl;
 	}
 	if (nb % 2 != 0 || nb % 3 != 0)
 	{
-		std::cout << nb << " n'est ni multiple de 2 ni de 3";
+		std::cout << nb << " n'est ni multiple de 2 ni de 3" << std::endl;
 	}
 
 
