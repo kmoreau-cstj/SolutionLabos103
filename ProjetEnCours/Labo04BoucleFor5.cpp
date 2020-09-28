@@ -1,6 +1,13 @@
-// But : L'utilisateur indique à quel étage il se trouve et donne sa destination. 
-// L'étage de départ peut être plus grand que l'étage d'arrivée et dans ce cas, l'ascenseur descend
-// sinon l'ascenseur monte
+// But : Demander à l'utilisateur un nombre de motifs à afficher à l'écran compris entre 1 et 70. 
+// Si il indique 4 le programme affiche 4 étoiles
+/*
+4 : ****
+10 : **********
+-1 : erreur
+0 : erreur
+71 : erreur
+*/
+
 // Auteur : Karine Moreau
 // Date : 2020
 
@@ -58,40 +65,36 @@ for (int compteur = valeurDeDepart; compteur < valeurDeFin; compteur = compteur 
 using namespace std;			// Pour éviter d'écrire std:: dans les instructions comme cout, cin, endl, ...			
 
 int main()
+
 {
+
 	setlocale(LC_ALL, "");
 
 	// Déclaration des variables
-	int etageArrivee;
-	int etageDepart;
 
-	// On demande l'étage à atteindre
-	cout << "Indiquez l'étage à atteindre -->";
-	cin >> etageArrivee;
+	int nombre;
 
-	if (etageArrivee > etageDepart)
+	int max; // Le résultat que le programme doit déterminer
+
+	cout << "Veuillez entrer le nombre 1 : ";
+	cin >> nombre;
+	//Ce premier nombre est automatiquement le max de la série
+	max = nombre;
+	for (int compteur = 2; compteur <= 10; compteur++)
+
 	{
-		cout << "Vous êtes à l'étage " << etageDepart << " et vous montez à l'étage " << etageArrivee << endl;
-		for (int i = etageDepart + 1; i <= etageArrivee; i++)
+		cout << "Veuillez entrer le nombre " << compteur << " : ";
+		cin >> nombre;
+
+		if (nombre > max)
 		{
-			cout << "Vous êtes à l'étage " << i << endl;
+			max = nombre;
 		}
 	}
-	else
-	{
-		cout << "Vous êtes à l'étage " << etageDepart << " et vous descendez à l'étage " << etageArrivee << endl;
-		for (int i = etageDepart - 1; i >= etageArrivee; i--)
-		{
-			cout << "Vous êtes à l'étage " << i << endl;
-		}
-	}
-	cout << "Vous êtes arrivé. Bonne journée" << endl;
 
-
-
-
-
-
+	cout << "Le max est : " << max << endl;
 
 	return 0;
+
+
 }

@@ -1,6 +1,9 @@
-// But : L'utilisateur indique à quel étage il se trouve et donne sa destination. 
-// L'étage de départ peut être plus grand que l'étage d'arrivée et dans ce cas, l'ascenseur descend
-// sinon l'ascenseur monte
+// But : Écrivez un programme qui lit 10 nombres et qui détermine et affiche la plus grande valeur.
+/*Le programme doit utiliser trois variables :
+pour la boucle for :                Compteur: Variable comptant jusqu'à 10
+La valeur que l'utilisateur donne : Nombre : Le nombre entré par l'utilisateur
+Le résultat à afficher :            Max : La plus grande valeur de tous les nombres
+*/
 // Auteur : Karine Moreau
 // Date : 2020
 
@@ -58,40 +61,36 @@ for (int compteur = valeurDeDepart; compteur < valeurDeFin; compteur = compteur 
 using namespace std;			// Pour éviter d'écrire std:: dans les instructions comme cout, cin, endl, ...			
 
 int main()
+
 {
+
 	setlocale(LC_ALL, "");
 
 	// Déclaration des variables
-	int etageArrivee;
-	int etageDepart;
 
-	// On demande l'étage à atteindre
-	cout << "Indiquez l'étage à atteindre -->";
-	cin >> etageArrivee;
+	int nombre;
 
-	if (etageArrivee > etageDepart)
+	int max; // Le résultat que le programme doit déterminer
+
+	cout << "Veuillez entrer le nombre 1 : ";
+	cin >> nombre;
+	//Ce premier nombre est automatiquement le max de la série
+	max = nombre;
+	for (int compteur = 2; compteur <= 10; compteur++)
+
 	{
-		cout << "Vous êtes à l'étage " << etageDepart << " et vous montez à l'étage " << etageArrivee << endl;
-		for (int i = etageDepart + 1; i <= etageArrivee; i++)
+		cout << "Veuillez entrer le nombre " << compteur << " : ";
+		cin >> nombre;
+
+		if (nombre > max)
 		{
-			cout << "Vous êtes à l'étage " << i << endl;
+			max = nombre;
 		}
 	}
-	else
-	{
-		cout << "Vous êtes à l'étage " << etageDepart << " et vous descendez à l'étage " << etageArrivee << endl;
-		for (int i = etageDepart - 1; i >= etageArrivee; i--)
-		{
-			cout << "Vous êtes à l'étage " << i << endl;
-		}
-	}
-	cout << "Vous êtes arrivé. Bonne journée" << endl;
 
-
-
-
-
-
+	cout << "Le max est : " << max << endl;
 
 	return 0;
+
+
 }
