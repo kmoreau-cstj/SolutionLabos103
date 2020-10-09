@@ -72,50 +72,120 @@ int main()
 
 	// Le programme doit demander à l'utilisateur le type d'employé pour lequel on doit calculer le salaire
 	// Pour cela le programme va afficher le menu offrant les types d'employé ou la possiblité de quitter le programme
-	cout << 
-
-
+	cout << "1. cadres" << endl;
+	cout << "2. travailleurs à tarif horaire" << endl;
+	cout << "3. travailleurs à la commission" << endl;
+	cout << "4. travailleurs à la pièce" << endl;
+	cout << "q. quitter le programme" << endl;
 	// le programme demande le choix de l'utilisateur
-	cout << 
-	cin >> 
+	cout << "Votre choix --> ";
+	cin >> typeEmploye;
+
 	// Le programme doit vérifier que le choix fait par l'utilisateur est un choix correct
 	// Le choix doit être compris entre 1 et 4 ou être la lettre q ou Q. L'utilisateur peut se tromper plusieurs fois => boucle
-		while (true)
-		{
+	while (!(typeEmploye >= '1' && typeEmploye <= '4' || typeEmploye == 'q' || typeEmploye == 'Q'))
+	{
+		cout << "Erreur : ..." << endl;
 
-		}
+		// A LA FIN de la boucle, la variable de boucle, ici typeEmploye, doit être réinitialisée
+		cout << "1. cadres" << endl;
+		cout << "2. travailleurs à tarif horaire" << endl;
+		cout << "3. travailleurs à la commission" << endl;
+		cout << "4. travailleurs à la pièce" << endl;
+		cout << "q. quitter le programme" << endl;
+		// le programme demande le choix de l'utilisateur
+		cout << "Votre choix --> ";
+		cin >> typeEmploye;
+	}
 
 	// ici on sait que le choix est valide
 
 	// Si l'utilisateur ne demande pas de quitter le programme
-	while (true)
+	while (typeEmploye != 'q' && typeEmploye !='Q')
 	{
+		// ici, le typeEmploye vaut 1, 2, 3 ou 4
+				
 		// le programme doit calculer le montant de la paie
 			
-			// selon le type d'employé
-		switch (switch_on)
+		// selon le type d'employé
+		switch (typeEmploye)
 		{
 
-			// calcul pour le cas 1 . les cadres
-
-	// calcul pour le cas 2 . 
-
-	// calcul pour le cas 3 . 
-
-	// calcul pour le cas 4 . 
-		default:
+		// calcul pour le cas 1 . les cadres
+		case '1' :
+			cout << "Entrez le salaire du cadre :";
+			cin >> salaireCadre;
+			paieEmploye = salaireCadre;
 			break;
+	// calcul pour le cas 2 .
+		case '2':
+			cout << "Entrez le nombre d'heures travaillées :";
+			cin >> nbHeures;
+			cout << "Entrez le taux horaire :";
+			cin >> tauxHoraire;
+
+			if (nbHeures <= HEURES_SUPP)
+			{
+				paieEmploye = nbHeures * tauxHoraire;
+			}
+			else
+			{
+				paieEmploye = HEURES_SUPP * tauxHoraire + (nbHeures - HEURES_SUPP) * tauxHoraire * TAUX_HEURES_SUPP;
+			}
+			break;
+
+	// calcul pour le cas 3 .
+		case '3' : 
+			cout << "Entrez le montant des ventes : ";
+			cin >> ventes;
+			paieEmploye = SALAIRE_FIXE + TAUX_VENTES * ventes;
+			break;
+	// calcul pour le cas 4 .
+		case '4' :
+			cout << "Entrez le nombre d'articles :";
+			cin >> nbArticles;
+			cout << "Entrez le taux pour l'article fabriqué :";
+			cin >> prixArticle;
+			paieEmploye = prixArticle * nbArticles;
+			break;
+		}// fin du switch
+
+		// Le programme peut afficher le montant de la paie
+		cout << "L'employé a un salaire de : " << paieEmploye << endl;
+		
+		// Le programme offre à l'utilisateur la possibilité de recommencer pour un autre type d'employé
+		// Le programme doit demander à l'utilisateur le type d'employé pour lequel on doit calculer le salaire
+	// Pour cela le programme va afficher le menu offrant les types d'employé ou la possiblité de quitter le programme
+		cout << "1. cadres" << endl;
+		cout << "2. travailleurs à tarif horaire" << endl;
+		cout << "3. travailleurs à la commission" << endl;
+		cout << "4. travailleurs à la pièce" << endl;
+		cout << "q. quitter le programme" << endl;
+		// le programme demande le choix de l'utilisateur
+		cout << "Votre choix --> ";
+		cin >> typeEmploye;
+
+		// Le programme doit vérifier que le choix fait par l'utilisateur est un choix correct
+		// Le choix doit être compris entre 1 et 4 ou être la lettre q ou Q. L'utilisateur peut se tromper plusieurs fois => boucle
+		while (!(typeEmploye >= '1' && typeEmploye <= '4' || typeEmploye == 'q' || typeEmploye == 'Q'))
+		{
+			cout << "Erreur : ..." << endl;
+
+			// A LA FIN de la boucle, la variable de boucle, ici typeEmploye, doit être réinitialisée
+			cout << "1. cadres" << endl;
+			cout << "2. travailleurs à tarif horaire" << endl;
+			cout << "3. travailleurs à la commission" << endl;
+			cout << "4. travailleurs à la pièce" << endl;
+			cout << "q. quitter le programme" << endl;
+			// le programme demande le choix de l'utilisateur
+			cout << "Votre choix --> ";
+			cin >> typeEmploye;
 		}
 
-	
-
-			// Le programme peut afficher le montant de la paie
-
-			// Le programme offre à l'utilisateur la possibilité de recommencer pour un autre type d'employé
-
-	}
+		// ici on sait que le choix est valide
 
 
+	} // fin de la boucle principale
 
 	return 0;
 }

@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="feuilleErreurPasCommettre.cpp" />
-    <ClCompile Include="Labo04Boucle1.cpp" />
     <ClCompile Include="Labo04Boucle2.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
