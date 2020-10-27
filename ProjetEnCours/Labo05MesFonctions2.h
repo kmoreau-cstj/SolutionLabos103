@@ -4,3 +4,9 @@
 int calculerCarre(int entier);
 int calculerCube(int nb);
 double calculerCube(double nb);
+double calculerFactorielle(int nb);
+int validerNombrePositif(int nb);
+int validerAnnee(int an);
+bool etreBissextile(int an);
+
+
