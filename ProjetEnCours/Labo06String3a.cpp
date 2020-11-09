@@ -18,12 +18,12 @@ int main()
 	const int MAX = 10;
 
 	// Déclaration des variables
-	double nombre;
+	int nombre;
 	char symbole;
 
 	cout << "Veuillez entrer un nombre entier : ";
 	// cin >> nombre;	// A la place de cin >>, on va lire toute la mémoire du clavier avec un string
-	nombre = saisirReel();
+	nombre = saisirEntier();
 
 	while (nombre < MIN || nombre > MAX)
 	{
@@ -32,7 +32,7 @@ int main()
 		// Le deuxième cin >> trouve encore la lettre dans la mémoire du clavier, il s'attendait à des chiffres, il met encore
 		// 0 dans nombre et laisse la lettre dans la mémoire du clavier ==> boucle infinie
 		//cin >> nombre;
-		nombre = saisirReel();
+		nombre = saisirEntier();
 	}
 	cout << nombre << " est bien compris entre " << MIN << " et " << MAX << endl;
 
