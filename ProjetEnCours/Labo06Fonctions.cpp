@@ -25,14 +25,12 @@ int saisirEntier()
 
 
 
-	while (!(!clavier.empty() && ((clavier.front() >= '0' && clavier.front() <= '9')
-			|| (clavier.length() > 1 && clavier.front() == '-' && clavier.at(1) >= '0' && clavier.at(1) <= '9'))))
-
-			  
+	/*while (!(!clavier.empty() && ((clavier.front() >= '0' && clavier.front() <= '9')
+			|| (clavier.length() > 1 && clavier.front() == '-' && clavier.at(1) >= '0' && clavier.at(1) <= '9'))))*/
 
 
-	/*while ((clavier.empty() || (clavier.front() !='-' && (clavier.front() < '0' || clavier.front() > '9')) ||
-		  ((clavier.length() < 2 || clavier.front() == '-' && (clavier.at(1) < '0' || clavier.at(1) > '9')))))*/
+	while ((clavier.empty() || ((clavier.front() < '0' || clavier.front() > '9')
+			&& (clavier.length() <= 1 || clavier.front() != '-' || clavier.at(1) < '0' || clavier.at(1) > '9'))))
 	{
 		cout << "Erreur : Vous devez taper des chiffres pour entrer un nombre entier." << endl;
 		cout << "Veuillez entrer un nombre entier : ";

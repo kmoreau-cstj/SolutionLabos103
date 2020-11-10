@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo07Alea.cpp">
+    <ClCompile Include="Labo06Fonctions.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Labo07Fonctions.cpp">
+    <ClCompile Include="Labo06String3a.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Labo07Fonctions.h">
+    <ClInclude Include="Labo06Fonctions.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
