@@ -28,7 +28,19 @@ void afficherContenuDuVecteur(vector<int> vecCopie);
 void ajouterValeurALaFinDuVecteur(vector<int>& vecSource, int nbElementAAjouter);
 void saisirValeurDansVecteur(vector<int>& vecSource, int finSaisie);
 
+// Ici, si le vecteur Source était volumineux, 1 000 000 de cases, on perdrait du temps à copier les valeurs
+// et perdreait de la place, on peut le passer par référence, du coup il ne fait pas de copie.
+// On protège le contenu du vecteur en mettre const devant, il est en lecteur seulement
+int calculerSommeVecteur(const vector<int>& vecSource);
+// ici c'est par copie, pas de danger, mais les performances peuvent être ralenties à cause de la copie
+//int calculerSommeVecteur(vector<int> vecSource);
+
+float calculerMoyenneVecteur(vector<int> vecSource);
+
 
 void faireUnTest(int paramParCopie, int& paramParReference);
 void faireUnTest2(int paramParCopie, const int& paramParReferenceGrosVolume);
+
+
+
 

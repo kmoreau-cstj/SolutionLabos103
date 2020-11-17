@@ -40,15 +40,16 @@ int main()
 
 
 	*/
-	vector<int> vec{ 12,0,42,0,0,68,0,-15,89,0,0,0,13,27,52,2,0,7,0,0 };
+	vector<int> vec{ 12,0,42, 0, 0, 68, 0, -15, 89, 0, 0, 0, 13, 27, 52, 2, 0, 7, 0, 0 };
 	vector<int> vecVide;
 
 	cout << " Appel de la fonction afficher contenu de vec : " << endl;
 	afficherContenuDuVecteur(vec);
-
+	/*
 	cout << " Appel de la fonction ajouter à la fin de vec : " << endl;
 	ajouterValeurALaFinDuVecteur(vec, 5);
 	afficherContenuDuVecteur(vec);
+	*/
 
 // 	1.	Écrivez une fonction qui saisit (remplace si le vecteur n'est pas vide, 
 	//  ou ajoute à la fin si le vecteur n'a plus de place) les valeurs dans le vecteur 
@@ -56,8 +57,24 @@ int main()
 	//  passée en paramètre pour mettre fin à la saisie, par exemple -1.
 	//  Vous appelez la fonction avec vec et vecVide.
 	//  écrire l'appel de la fonction, puis son prototype dans le .h et le code dans le .cpp
+	
+	/*
 	saisirValeurDansVecteur(vec, -1);
+	afficherContenuDuVecteur(vec);
 	saisirValeurDansVecteur(vecVide, -999);
+	afficherContenuDuVecteur(vecVide);
+
+	*/
+
+	//2.Écrivez une fonction qui fait la somme des éléments du vecteur.
+	cout << "La somme des éléments de vec est : " << calculerSommeVecteur(vec) << endl;
+	cout << "La somme des éléments de vecVide est : " << calculerSommeVecteur(vecVide) << endl;
+
+	//3.Écrivez une fonction qui fait la moyenne des éléments du vecteur.
+	cout << "La moyenne des éléments de vec est : " << calculerMoyenneVecteur(vec) << endl;
+	cout << "La moyenne des éléments de vecVide est : " << calculerMoyenneVecteur(vecVide) << endl;
+
+
 
 	return 0;
 }
