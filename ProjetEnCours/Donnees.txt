@@ -9,3 +9,7 @@ Fournier	Richard			20   20   21
 Lalonde		Claudine		15   20   25
 Malouin		Jules			20   10   12
 Maranda		Armande			30   30   38
+
+
+
+
