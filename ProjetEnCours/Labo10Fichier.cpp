@@ -219,6 +219,7 @@ Nom             Prénom              Eval 1    Eval 2    Eval 3     Total Résulta
 
 	// Avant de quitter le programme, il faut fermer tous les fichiers que l'on a ouvert
 	ifEntree.close();
+	ofSortie.close();		// Permet d'informer le SE que le fichier est fermé et donc disponible pour un autre utilisateur.
 
 	return 0;
 }
