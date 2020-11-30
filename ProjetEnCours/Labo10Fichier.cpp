@@ -130,8 +130,6 @@ Nom             Prénom              Eval 1    Eval 2    Eval 3     Total Résulta
 
 
 
-
-
 	// Deuxième phase : Lire les informations dans le fichier
 	// ON TENTE lire un enregistrement en lisant les 5 champs à la fois pour forcer le canal à mettre à jour s'il a atteint ou 
 	// non la fin du fichier
