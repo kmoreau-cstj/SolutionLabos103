@@ -54,11 +54,10 @@ int main()
 	// Tant que la fin du fichier n'a pas été rencontrée, dans leChapitreCourant, il y a des données à traiter
 	while (!canalD.eof())
 	{
-		// Chapitre 1  : Introduction au C++.................................................1
-		canalS << left << setw(COL1) << TITRE_SECTION << right << setw(COL2) << numeroSection << left << setw(COL3) << SEPARATEUR_SECTION;
-		canalS << setfill(POINT_DE_SUITE) << setw(COL4) << leChapitreCourant.titreChapitre;
-		canalS << right << setw(COL5) << leChapitreCourant.numeroPage << setfill(' ') << endl;
-
+		
+		// Formater le titre du chapitre et le numéro de page pour écrire dans la table des matières
+		ecrireEnregistrement(canalS, leChapitreCourant, numeroSection);
+		
 		// On passe au chapitre suivant 
 		numeroSection++;
 

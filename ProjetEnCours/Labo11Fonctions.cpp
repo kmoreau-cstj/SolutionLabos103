@@ -37,6 +37,9 @@ void lireEnregistrement(ifstream& canal, Chapitre& chapitreLu)
 	// On doit lire le numéro de la page. C'est un entier donc on peut utiliser le >>. Normalement, le fichier de données
 	// ne doit pas contenir d'erreur.
 	canal >> chapitreLu.numeroPage;
+	// Les becs de canard ont la facheuse idée de ne pas enlever le séparateur (espace, \t, \n) qui met fin à la lecture
+	// Il faut ignorer le séparateur après la lecture avec les >>
+	canal.ignore(1, '\n');
 }
 
 Chapitre lireEnregitrement(ifstream& canal)
@@ -47,6 +50,9 @@ Chapitre lireEnregitrement(ifstream& canal)
 	getline(canal, chapitreALire.titreChapitre, ';');
 	// On lit le deuxième champ
 	canal >> chapitreALire.numeroPage;
+	// Les becs de canard ont la facheuse idée de ne pas enlever le séparateur (espace, \t, \n) qui met fin à la lecture
+	// Il faut ignorer le séparateur après la lecture avec les >>
+	canal.ignore(1, '\n');
 
 	// On a fini la lecture de toute la ligne dans le fichier, on retourne l'enveloppe du chapitreALire
 	return chapitreALire;
@@ -61,4 +67,13 @@ void ecrireEnTete(ofstream& canal, const string TITRE, int nbLigneApresTitre)
 	{
 		canal << endl;
 	}
+}
+
+void ecrireEnregistrement(ofstream& canal, Chapitre chapitreAEcrire, int numChapitre)
+{
+	// Chapitre 1  : Introduction au C++.................................................1
+	canal << left << setw(COL1) << TITRE_SECTION << right << setw(COL2) << numChapitre << left << setw(COL3) << SEPARATEUR_SECTION;
+	canal << setfill(POINT_DE_SUITE) << setw(COL4) << chapitreAEcrire.titreChapitre;
+	canal << right << setw(COL5) << chapitreAEcrire.numeroPage << setfill(' ') << endl;
+
 }

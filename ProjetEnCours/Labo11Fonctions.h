@@ -18,7 +18,7 @@ const string SEPARATEUR_SECTION = " : ";
 const char POINT_DE_SUITE = '.';
 // Constantes pour bien aligner les données dans le fichier de sortie
 const int COL1 = TITRE_SECTION.length() +1 ;	// Pour écrire le TITRE_SECTION + un espace pour ne pas toucher la colonne suivante
-const int COL2 = 3 + 1;							// Pour avoir de la place pour écrire un entier jusqu'à 3 chiffres + 1 espace
+const int COL2 = 2;							// Pour avoir de la place pour écrire un entier jusqu'à 2 chiffres 99
 const int COL3 = SEPARATEUR_SECTION.length();
 const int COL4 = 50;						// Pour le titre du chapitre
 const int COL5 = 5;						// Pour le numéro de page du chapitre et le libre pourrait avoir plus de 10 000 pages
@@ -47,3 +47,7 @@ void creerFichierEnEcriture(const string NOM_FICHIER, ofstream& canal);
 void lireEnregistrement(ifstream& canal, Chapitre& chapitreLu);
 Chapitre lireEnregitrement(ifstream& canal);
 void ecrireEnTete(ofstream& canal, const string TITRE, int nbLigneApresTitre);
+
+// Le paramètre chapitreAEcrire est passé par copie, car le contenu n'est pas modifié par la fonction ecrire.
+// La fonction a juste besoin de connaitre la valeur du titre du chapitre et son numéro
+void ecrireEnregistrement(ofstream& canal, Chapitre chapitreAEcrire, int numChapitre);
