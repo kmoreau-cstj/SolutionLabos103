@@ -19,15 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Donnees.txt" />
-    <Text Include="DonneesChapitres.txt" />
+    <ClCompile Include="Labo11Exercice2.cpp" />
+    <ClCompile Include="Labo11Exercice2Fonctions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo11FichiersEtStructures.cpp" />
-    <ClCompile Include="Labo11Fonctions.cpp" />
+    <ClInclude Include="Labo11Exercice2Fonctions.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Labo11Fonctions.h" />
+    <Text Include="Contacts.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
